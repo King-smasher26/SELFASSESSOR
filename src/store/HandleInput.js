@@ -1,5 +1,6 @@
 import { configureStore,createSlice} from "@reduxjs/toolkit";
 import { useState } from "react";
+// this is my redux store
 const initialState={
     name:[],
     email:[],
