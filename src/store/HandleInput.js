@@ -1,4 +1,4 @@
-import { configureStore,createSlice,nanoid} from "@reduxjs/toolkit";
+import { configureStore,createSlice} from "@reduxjs/toolkit";
 import { useState } from "react";
 const initialState={
     name:[],
@@ -103,14 +103,13 @@ const HandleInput = createSlice({
 
         },
         validationHandler2(state,action){
-            // if(state.marksheet10.length===0||state.marksheet12.length===0||state.marksheetgrad.length===0||state.offerletter.length===0||state.salaryslip.length===0||state.bankstatement.length===0){
-            //     alert('Enter the fields that are marked with *')
-            // }
-            // else{
-            //     state.pageState=state.pageState+1;
+            if(state.marksheet10.length===0||state.marksheet12.length===0||state.marksheetgrad.length===0||state.offerletter.length===0||state.salaryslip.length===0||state.bankstatement.length===0){
+                alert('Enter the fields that are marked with *')
+            }
+            else{
+                state.pageState=state.pageState+1;
 
-            // }
-            state.pageState=state.pageState+1
+            }
         },
         handleaboutyou1(state,action){
             state.aboutyou1=action.payload;
